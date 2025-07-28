@@ -4,13 +4,14 @@ import Image from "next/image";
 import { navigationItems } from "@/constants";
 import { useAuth } from "@/lib/hooks/useAuth";
 import { signOut } from "@/lib/actions/auth.actions";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "./LanguageToggle";
 
 const Nav = () => {
   const [signingOut, setSigningOut] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, loading } = useAuth();
   const { t, language } = useLanguage();
   const pathname = usePathname();
@@ -19,6 +20,25 @@ const Nav = () => {
   const getTextSizeClass = () => {
     return language === 'bn' ? 'text-lg' : 'text-base';
   };
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   // Navigation items with translation keys
   const getNavigationItems = () => [
