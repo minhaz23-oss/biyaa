@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Parkinsans } from "next/font/google";
 import localFont from 'next/font/local';
 import "./globals.css";
+import ReduxProvider from "@/components/providers/ReduxProvider";
+import { Toaster } from "@/components/ui/sonner";
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import DynamicLayout from '@/components/DynamicLayout';
 
 const parkinsans = Parkinsans({
   weight: ['400', '500', '600', '700'],
@@ -37,9 +41,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <body className={`${parkinsans.variable} ${mina.variable} min-h-screen bg-background text-foreground`}>
-        {children}
+        <LanguageProvider>
+          <DynamicLayout>
+            <ReduxProvider>
+              {children}
+              <Toaster position="top-center" />
+            </ReduxProvider>
+          </DynamicLayout>
+        </LanguageProvider>
       </body>
     </html>
   );

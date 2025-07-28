@@ -94,9 +94,17 @@
   }
 }
 
-/* Custom utilities for Bengali text detection */
+/* Custom utilities for dynamic font switching */
 @utility bengali-font {
   font-family: var(--font-family-mina);
+}
+
+@utility font-mina {
+  font-family: var(--font-mina);
+}
+
+@utility font-parkinsans {
+  font-family: var(--font-parkinsans);
 }
 
 @utility text-gradient-primary {
@@ -112,11 +120,50 @@
   .bengali-text {
     font-family: var(--font-family-mina);
   }
+  
+  .font-mina {
+    font-family: var(--font-mina) !important;
+  }
+  
+  .font-parkinsans {
+    font-family: var(--font-parkinsans) !important;
+  }
   .btn-primary{
-    @apply bg-primary rounded-md px-6 py-2 text-white;
+    @apply bg-primary/80 rounded-md px-6 py-2 text-white hover:bg-primary;
   }
   .btn-secondary{
-    @apply border-2 border-primary rounded-md px-6 py-2 text-primary;
+    @apply border-2 border-primary rounded-md px-6 py-2 text-primary hover:bg-primary hover:text-white;
+  }
+  .form {
+    @apply w-full;
+    
+    .label {
+      @apply !text-black !font-semibold ;
+    }
+    
+    .input {
+      @apply !bg-white !text-black !border-black focus:border-black focus:ring-black ;
+    }
+  }
+  
+  /* Custom toast styles */
+  [data-sonner-toast][data-type="success"] {
+    @apply !bg-green-50 !text-green-500 !border-green-500;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  [data-sonner-toast][data-type="error"] {
+    @apply !bg-red-50 !text-red-500 !border-red-500;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  [data-sonner-toast] {
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 }
 

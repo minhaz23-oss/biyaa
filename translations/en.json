@@ -1,0 +1,1233 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "form": {
+    "general": {
+      "biodataType": {
+        "label": "Biodata Type",
+        "placeholder": "Select one",
+        "options": {
+          "male": "Male's Biodata",
+          "female": "Female's Biodata"
+        }
+      },
+      "maritalStatus": {
+        "label": "Marital Status",
+        "placeholder": "Select one",
+        "options": {
+          "single": "Single",
+          "married": "Married",
+          "divorced": "Divorced"
+        }
+      },
+      "birthYear": {
+        "label": "Birth Year",
+        "placeholder": "e.g., 1995"
+      },
+      "height": {
+        "label": "Height",
+        "placeholder": "e.g., 5ft 8in"
+      },
+      "complexion": {
+        "label": "Complexion",
+        "placeholder": "Select one",
+        "options": {
+          "black": "Black",
+          "brown": "Brown",
+          "lightBrown": "Light Brown",
+          "fair": "Fair",
+          "veryFair": "Very Fair"
+        }
+      },
+      "weight": {
+        "label": "Weight",
+        "placeholder": "e.g., 70kg"
+      },
+      "bloodGroup": {
+        "label": "Blood Group",
+        "placeholder": "Select one"
+      },
+      "nationality": {
+        "label": "Nationality",
+        "placeholder": "e.g., Bangladeshi"
+      }
+    },
+    "address": {
+      "presentAddress": "Present Address",
+      "permanentAddress": "Permanent Address",
+      "sameAsPresent": "Permanent address is the same as present address",
+      "country": {
+        "label": "Country",
+        "placeholder": "Select Country"
+      },
+      "division": {
+        "label": "Division",
+        "placeholder": "Select Division"
+      },
+      "district": {
+        "label": "District",
+        "placeholder": "Select District"
+      },
+      "upazilla": {
+        "label": "Upazilla",
+        "placeholder": "Select Upazilla"
+      }
+    },
+    "contact": {
+      "fullName": {
+        "label": "Full Name"
+      },
+      "guardianMobileNumber": {
+        "label": "Guardian's Mobile Number"
+      },
+      "relationshipWithGuardian": {
+        "label": "Relationship with Guardian"
+      },
+      "emailToReceiveBiodata": {
+        "label": "E-mail to Receive Biodata"
+      }
+    },
+    "education": {
+      "highestDegree": {
+        "label": "Highest Degree",
+        "placeholder": "e.g., B.Sc. in Computer Science"
+      },
+      "institution": {
+        "label": "Institution",
+        "placeholder": "e.g., University of Example"
+      },
+      "graduationYear": {
+        "label": "Graduation Year"
+      }
+    },
+    "expectedLifePartner": {
+      "age": {
+        "label": "Age",
+        "placeholder": "e.g., 25-30"
+      },
+      "complexion": {
+        "label": "Complexion",
+        "placeholder": "Select one",
+        "options": {
+          "any": "Any",
+          "black": "Black",
+          "brown": "Brown",
+          "lightBrown": "Light Brown",
+          "fair": "Fair",
+          "veryFair": "Very Fair"
+        }
+      },
+      "height": {
+        "label": "Height",
+        "placeholder": "e.g., 5ft 4in - 5ft 8in"
+      },
+      "educationalQualification": {
+        "label": "Educational Qualification",
+        "placeholder": "e.g., Graduate"
+      },
+      "district": {
+        "label": "District",
+        "placeholder": "e.g., Dhaka"
+      },
+      "maritalStatus": {
+        "label": "Marital Status",
+        "placeholder": "Select one",
+        "options": {
+          "any": "Any",
+          "single": "Single",
+          "divorced": "Divorced",
+          "widowed": "Widowed"
+        }
+      },
+      "profession": {
+        "label": "Profession",
+        "placeholder": "e.g., Doctor, Teacher"
+      },
+      "financialCondition": {
+        "label": "Financial Condition",
+        "placeholder": "Select one",
+        "options": {
+          "any": "Any",
+          "upperClass": "Upper Class",
+          "middleClass": "Middle Class",
+          "lowerMiddleClass": "Lower-Middle Class"
+        }
+      },
+      "qualities": {
+        "label": "Expected qualities or attributes of your life partner",
+        "placeholder": "Share your thoughts on the qualities you expect in a life partner."
+      }
+    },
+    "family": {
+      "fatherName": {
+        "label": "Father's Name",
+        "placeholder": "e.g., John Doe"
+      },
+      "isFatherAlive": {
+        "label": "Is Father Alive?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "fatherProfession": {
+        "label": "Father's Profession",
+        "placeholder": "e.g., Doctor"
+      },
+      "motherName": {
+        "label": "Mother's Name",
+        "placeholder": "e.g., Jane Smith"
+      },
+      "isMotherAlive": {
+        "label": "Is Mother Alive?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "motherProfession": {
+        "label": "Mother's Profession",
+        "placeholder": "e.g., Teacher"
+      },
+      "familyStatus": {
+        "label": "Family Status",
+        "placeholder": "Select a status",
+        "options": {
+          "upperClass": "Upper Class",
+          "upperMiddleClass": "Upper-Middle Class",
+          "middleClass": "Middle Class",
+          "lowerMiddleClass": "Lower-Middle Class",
+          "lowerClass": "Lower Class"
+        }
+      },
+      "numberOfSiblings": {
+        "label": "Number of Siblings"
+      }
+    },
+    "marriage": {
+      "guardiansAgree": {
+        "label": "Do your guardians agree to your marriage?",
+        "placeholder": "Select one",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "keepWifeInVeil": {
+        "label": "Will you be able to keep your wife in veil after marriage?",
+        "placeholder": "Select one",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "allowWifeToStudy": {
+        "label": "Would you like to allow your wife to study after marriage?",
+        "placeholder": "Select one",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "allowWifeToDoJob": {
+        "label": "Would you like to allow your wife to do any job after marriage?",
+        "placeholder": "Select one",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "liveWithWifeAfterMarriage": {
+        "label": "Where will you live with your wife after marriage?",
+        "placeholder": "e.g., With my family"
+      },
+      "wantToDoJobAfterMarriage": {
+        "label": "Would you like to do any job after marriage?",
+        "placeholder": "Select one",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "wantToStudyAfterMarriage": {
+        "label": "Would you like to study after marriage?",
+        "placeholder": "Select one",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "marriageThoughts": {
+        "label": "Why are you getting marriage? What is your thought on this.",
+        "placeholder": "Share your thoughts"
+      }
+    },
+    "occupational": {
+      "occupation": {
+        "label": "Occupation",
+        "placeholder": "Select your occupation",
+        "options": {
+          "student": "Student",
+          "service": "Service",
+          "business": "Business",
+          "housewife": "Housewife",
+          "unemployed": "Unemployed",
+          "other": "Other"
+        }
+      },
+      "descriptionOfProfession": {
+        "label": "Description of Profession"
+      },
+      "monthlyIncome": {
+        "label": "Monthly Income"
+      }
+    },
+    "personalDetails": {
+      "clothing": {
+        "label": "What kind of clothes do you usually wear outside?"
+      },
+      "hasBeard": {
+        "label": "Do you have a beard according to Sunnah?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "beardSince": {
+        "label": "Since when?"
+      },
+      "clothesAboveAnkles": {
+        "label": "Do you wear clothes above your ankles?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "wearNiqab": {
+        "label": "Do you wear niqab?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "niqabSince": {
+        "label": "Since when?"
+      },
+      "praysFiveTimes": {
+        "label": "Do you pray five times a day?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "mahramNonMahram": {
+        "label": "Do you comply with mahram/non-mahram?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "recitesQuran": {
+        "label": "Are you able to recite the Quran correctly?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "fiqh": {
+        "label": "Which fiqh do you follow?",
+        "placeholder": "Select a fiqh",
+        "options": {
+          "hanafi": "Hanafi",
+          "maliki": "Maliki",
+          "shafii": "Shafi'i",
+          "hanbali": "Hanbali",
+          "ahleHadisSalafi": "Ahle Hadis/Salafi"
+        }
+      },
+      "diseases": {
+        "label": "Do you have any mental or physical diseases?"
+      },
+      "dramasMoviesSongs": {
+        "label": "Do you watch or listen to dramas/songs/movies?",
+        "placeholder": "Select an option",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "mazarBeliefs": {
+        "label": "What are your ideas or beliefs about the shrine (mazar)?"
+      },
+      "hobbies": {
+        "label": "Write about your hobbies/likes/tastes/dreams and so on."
+      }
+    },
+    "pledge": {
+      "parentsKnow": {
+        "label": "Do your parents know that you are submitting biodata to this website?",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "allInfoTrue": {
+        "label": "By Allah, I testify that all the given info is true. If you provide any false information, Biyaa.com will not take any responsibility for the conventional law and the hereafter. Do you agree?",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "guide": "Guide",
+    "aboutUs": "About Us",
+    "qna": "Q&A",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "profile": "Profile",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "At Biyaa, we believe in the power of connection and the beauty of lifelong partnerships. Our journey began with a simple but profound vision: to create a trusted and secure platform where individuals can find their ideal life partners based on shared values, aspirations, and cultural understanding.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower individuals to find compatible life partners by providing a secure, user-friendly, and culturally sensitive platform that fosters genuine connections and successful marriages."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading matrimonial platform globally, recognized for our integrity, innovation, and commitment to the happiness of every couple we help unite."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Integrity, Empathy, Innovation, Community, and Trust. These values guide every decision we make and every feature we build."
+    },
+    "journey": {
+      "title": "Our Journey",
+      "subtitle": "From a humble beginning to a thriving community, our story is one of dedication, growth, and countless success stories.",
+      "beginningTitle": "The Beginning",
+      "beginningText1": "Established in [Year], Biyaa started as a small initiative to bridge the gap for individuals seeking meaningful relationships within cultural contexts. We understood the nuances of traditional matchmaking and combined it with modern technology to provide a seamless experience.",
+      "beginningText2": "Over the years, we have grown into a vibrant community, continuously evolving to meet the diverse needs of our members. Our success is measured by the happiness of the couples who found each other through Biyaa.",
+      "yearsOfService": "Years of Service",
+      "happyMembers": "Happy Members",
+      "successStories": "Success Stories"
+    },
+    "features": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuously enhancing our platform with cutting-edge technology to provide the best user experience."
+      },
+      "community": {
+        "title": "Community-Centric",
+        "description": "Building a supportive and engaging community where members feel safe and valued."
+      },
+      "globalReach": {
+        "title": "Global Reach",
+        "description": "Connecting hearts across borders, making it easier to find partners worldwide."
+      },
+      "trust": {
+        "title": "Trust & Security",
+        "description": "Prioritizing the safety and privacy of our members through robust security measures."
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Us?",
+      "subtitle": "Discover why Biyaa is the preferred choice for finding your life partner.",
+      "privacyTitle": "Unmatched Privacy",
+      "privacyDescription": "Your data is safe with us. We employ advanced security protocols to keep your personal information confidential.",
+      "verifiedTitle": "Verified Profiles",
+      "verifiedDescription": "Every profile on Biyaa undergoes a rigorous verification process, ensuring you connect with genuine individuals.",
+      "smartMatchingTitle": "Smart Matching",
+      "smartMatchingDescription": "Our intelligent algorithms analyze your preferences to suggest the most compatible matches, saving you time and effort."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "heroMessage": "Have questions about finding your perfect match? Need technical support? We're here to help you every step of the way!",
+    "multipleWays": "Multiple Ways to Reach Us",
+    "multipleWaysDesc": "Choose the method that works best for you. We're committed to responding promptly.",
+    "generalInquiries": "General Inquiries",
+    "generalInquiriesDesc": "Questions about our platform, membership, or how we work?",
+    "customerSupport": "Customer Support",
+    "customerSupportDesc": "Need help with your account, profile, or matching process?",
+    "technicalIssues": "Technical Issues",
+    "technicalIssuesDesc": "Experiencing technical problems or found a bug?",
+    "visitOffice": "Visit Our Office",
+    "visitOfficeDesc": "We'd love to meet you in person! Drop by our office during business hours.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "officeHours": "Office Hours",
+    "monday": "Monday - Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "note": "Note",
+    "holidayNote": "During Ramadan and major holidays, our office hours may vary. Please call ahead to confirm.",
+    "faq": "Frequently Asked Questions",
+    "faqDesc": "Quick answers to common questions. Can't find what you're looking for? Contact us!",
+    "responseTime": "How quickly do you respond to inquiries?",
+    "responseTimeAnswer": "We aim to respond to all inquiries within 24 hours during business days. For urgent technical issues, we typically respond within 2-4 hours.",
+    "messageInfo": "What information should I include in my message?",
+    "messageInfoAnswer": "Please include your full name, registered email (if applicable), and a detailed description of your question or issue. Screenshots are helpful for technical problems.",
+    "phoneSupport": "Do you provide phone support?",
+    "phoneSupportAnswer": "Yes! You can call us during office hours for immediate assistance. For complex issues, we may schedule a callback at your convenience.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "messageSent": "Message Sent!",
+      "thankYou": "Thank you for contacting us. We'll get back to you within 24 hours."
+    }
+  },
+  "languageToggle": {
+    "switchToEnglish": "English",
+    "switchToBengali": "বাংলা"
+  },
+  "home": {
+    "heroTitle": "Start a New Chapter of Your Life Today",
+    "heroDescription": "No more hassles in finding your bride. Now find your preferred bride in your own district."
+  },
+  "searchBar": {
+    "all": "All",
+    "malesBiodata": "Males Biodata",
+    "femalesBiodata": "Females Biodata",
+    "single": "Single",
+    "married": "Married",
+    "divorced": "Divorced",
+    "selectBiodataType": "Please select a biodata type",
+    "biodataType": "Biodata Type",
+    "marital": "Marital Status",
+    "division": "Division",
+    "district": "District",
+    "upazilla": "Upazilla",
+    "allDivisions": "All Divisions",
+    "allDistricts": "All Districts",
+    "allUpazillas": "All Upazillas"
+  },
+  "search": {
+    "title": "Biodata Search",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters",
+    "searchNow": "Search Now",
+    "activeFilters": "Active Filters",
+    "noFiltersApplied": "No filters applied",
+    "noSearchParams": "No search parameters",
+    "startNewSearch": "Start New Search",
+    "filterNames": {
+      "maritalStatus": "Marital Status",
+      "division": "Division",
+      "district": "District",
+      "upazilla": "Upazilla",
+      "biodataType": "Biodata Type",
+      "address": "Address",
+      "complexion": "Complexion",
+      "familyStatus": "Family Status",
+      "height": "Height",
+      "age": "Age",
+      "profession": "Profession"
+    },
+    "filterOptions": {
+      "all": "All",
+      "single": "Single",
+      "married": "Married",
+      "divorced": "Divorced",
+      "widowed": "Widowed",
+      "males_biodata": "Males Biodata",
+      "females_biodata": "Females Biodata",
+      "fair": "Fair",
+      "medium": "Medium",
+      "dark": "Dark",
+      "upper_class": "Upper Class",
+      "upper_middle": "Upper-Middle Class",
+      "middle_class": "Middle Class",
+      "lower_middle": "Lower-Middle Class",
+      "lower_class": "Lower Class",
+      "student": "Student",
+      "teacher": "Teacher",
+      "engineer": "Engineer",
+      "doctor": "Doctor",
+      "business": "Business",
+      "government_job": "Government Job",
+      "private_job": "Private Job",
+      "freelancer": "Freelancer",
+      "other": "Other"
+    },
+    "sections": {
+      "basicInformation": "Basic Information",
+      "personalSocial": "Personal & Social",
+      "location": "Location",
+      "actions": "Actions"
+    },
+    "labels": {
+      "age": "Age",
+      "height": "Height",
+      "complexion": "Complexion",
+      "maritalStatus": "Marital Status",
+      "familyStatus": "Family Status",
+      "profession": "Profession",
+      "biodataType": "Biodata Type",
+      "division": "Division",
+      "district": "District",
+      "upazilla": "Upazilla",
+      "address": "Address"
+    },
+    "placeholders": {
+      "ageRange": "Age Range",
+      "height": "Height",
+      "complexion": "Complexion",
+      "maritalStatus": "Marital Status",
+      "familyStatus": "Family Status",
+      "profession": "Profession",
+      "biodataType": "Biodata Type",
+      "division": "Division",
+      "district": "District",
+      "upazilla": "Upazilla",
+      "address": "Address (Optional)",
+      "loading": "Loading..."
+    },
+    "locationOptions": {
+      "allDivisions": "All Divisions",
+      "allDistricts": "All Districts",
+      "allUpazillas": "All Upazillas"
+    },
+    "buttons": {
+      "searchNow": "Search Now",
+      "clearAllFilters": "Clear All Filters"
+    },
+    "results": {
+      "searching": "Searching...",
+      "resultsFound": "Results Found",
+      "noResultsFound": "No Results Found",
+      "tryAdjusting": "Try adjusting your search criteria",
+      "modifySearch": "Modify Search",
+      "searchingForMatches": "Searching for matches...",
+      "viewProfile": "View Profile",
+      "anonymous": "Anonymous"
+    },
+    "profileLabels": {
+      "age": "Age",
+      "location": "Location",
+      "profession": "Profession",
+      "maritalStatus": "Marital Status",
+      "height": "Height",
+      "type": "Type"
+    }
+  },
+  "viewBiodata": {
+    "backToSearch": "Back to Search",
+    "biodataId": "Biodata ID",
+    "years": "years",
+    "sections": {
+      "personalInformation": "Personal Information",
+      "address": "Address",
+      "educationalBackground": "Educational Background",
+      "professionalInformation": "Professional Information",
+      "familyInformation": "Family Information",
+      "partnerPreferences": "Partner Preferences",
+      "contactInformation": "Contact Information"
+    },
+    "labels": {
+      "fullName": "Full Name",
+      "age": "Age",
+      "height": "Height",
+      "weight": "Weight",
+      "complexion": "Complexion",
+      "maritalStatus": "Marital Status",
+      "dateOfBirth": "Date of Birth",
+      "placeOfBirth": "Place of Birth",
+      "nationality": "Nationality",
+      "aboutMe": "About Me",
+      "presentAddress": "Present Address",
+      "permanentAddress": "Permanent Address",
+      "highestDegree": "Highest Degree",
+      "graduationYear": "Graduation Year",
+      "institution": "Institution",
+      "bloodGroup": "Blood Group",
+      "birthYear": "Birth Year",
+      "occupation": "Occupation",
+      "monthlyIncome": "Monthly Income",
+      "descriptionOfProfession": "Description of Profession",
+      "familyStatus": "Family Status",
+      "fatherName": "Father's Name",
+      "isFatherAlive": "Is Father Alive",
+      "fatherProfession": "Father's Profession",
+      "motherName": "Mother's Name",
+      "isMotherAlive": "Is Mother Alive",
+      "motherProfession": "Mother's Profession",
+      "numberOfSiblings": "Number of Siblings",
+      "preferredAge": "Preferred Age",
+      "preferredHeight": "Preferred Height",
+      "preferredComplexion": "Preferred Complexion",
+      "preferredEducation": "Preferred Education",
+      "preferredOccupation": "Preferred Occupation",
+      "preferredFinancialCondition": "Preferred Financial Condition",
+      "preferredLocation": "Preferred Location",
+      "preferredMaritalStatus": "Preferred Marital Status",
+      "expectedQualities": "Expected Qualities",
+      "relationshipWithGuardian": "Relationship with Guardian",
+      "guardianMobile": "Guardian Mobile",
+      "email": "Email",
+      "guardiansAgreement": "Guardian's agreement confirmed"
+    },
+    "actions": {
+      "backToSearchResults": "Back to Search Results",
+      "signInToFavorite": "Sign in to favorite",
+      "addToFavorites": "Add to Favorites",
+      "removeFromFavorites": "Remove from Favorites",
+      "signInToIgnore": "Sign in to ignore",
+      "addToIgnoreList": "Add to Ignore List",
+      "removeFromIgnoreList": "Remove from Ignore List"
+    }
+  },
+  "statistics": {
+    "title": "Platform Statistics",
+    "description": "Join thousands of people who have found their life partners through our platform",
+    "totalBiodata": "Total Biodata",
+    "registeredProfiles": "Registered profiles",
+    "maleProfiles": "Male Profiles",
+    "groomProfiles": "Groom profiles",
+    "femaleProfiles": "Female Profiles",
+    "brideProfiles": "Bride profiles",
+    "successfulMarriages": "Successful Marriages",
+    "happyCouples": "Happy couples"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Follow these simple steps to find your perfect life partner",
+    "step1": {
+      "title": "Create Biodata",
+      "description": "Sign up and create your detailed biodata with personal information, preferences, and photos"
+    },
+    "step2": {
+      "title": "Search Biodata",
+      "description": "Browse through profiles using advanced filters like location, profession, education, and more"
+    },
+    "step3": {
+      "title": "Contact",
+      "description": "Connect with potential matches, share contact information, and start meaningful conversations"
+    },
+    "step4": {
+      "title": "Get Married",
+      "description": "Meet your perfect match, get to know each other, and take the next step towards a happy marriage"
+    }
+  },
+  "footer": {
+    "companyDescription": "Biyaa is Bangladesh's leading matrimonial platform, connecting hearts and building families. We help people find their perfect life partners through our trusted and secure platform.",
+    "quickLinks": "Quick Links",
+    "searchProfiles": "Search Profiles",
+    "myAccount": "My Account",
+    "register": "Register",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "contactInfo": "Contact Info",
+    "location": "Dhaka, Bangladesh",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "helpCenter": "Help Center",
+    "allRightsReserved": "All rights reserved.",
+    "madeWithLove": "Made with ❤️ in Bangladesh"
+  },
+  "auth": {
+    "signInTitle": "Log in to your account",
+    "signInSubtitle": "(Log in your account)",
+    "signUpTitle": "Create an account",
+    "signUpSubtitle": "(Create an account)",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your Email",
+    "password": "Password",
+    "passwordPlaceholder": "Your Password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm Password",
+    "signInButton": "Sign in",
+    "signUpButton": "Create an account",
+    "or": "OR",
+    "continueWithGoogle": "Continue with Google",
+    "alreadyHaveAccount": "Already have an account? ",
+    "dontHaveAccount": "Don't have an account? ",
+    "signInLink": "Sign in",
+    "signUpLink": "Sign up"
+  },
+  "qna": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about Biyaa. Can't find what you're looking for? Contact our support team!",
+    "searchPlaceholder": "Search for questions...",
+    "noResultsFound": "No results found",
+    "noResultsMessage": "Try searching with different keywords or browse all questions below.",
+    "stillHaveQuestions": "Still have questions?",
+    "supportMessage": "Our friendly customer support team is here to help you 24/7",
+    "helpCenter": "Help Center",
+    "helpCenterDescription": "Browse our comprehensive help articles",
+    "visitHelpCenter": "Visit Help Center",
+    "liveChat": "Live Chat",
+    "liveChatDescription": "Chat with our support team instantly",
+    "startChat": "Start Chat",
+    "emailSupport": "Email Support",
+    "emailSupportDescription": "Send us an email and we'll respond within 24 hours",
+    "emailUs": "Email Us",
+    "categories": {
+      "gettingStarted": "Getting Started",
+      "safetyPrivacy": "Safety & Privacy",
+      "findingMatches": "Finding Matches",
+      "communication": "Communication",
+      "accountTechnical": "Account & Technical",
+      "successSupport": "Success & Support"
+    },
+    "questions": {
+      "howToCreateAccount": "How do I create an account on Biyaa?",
+      "howToCreateAccountAnswer": "Creating an account is simple! Click on 'Sign Up' button, provide your email address, create a secure password, and verify your email. Then, complete your profile with personal information, photos, and preferences to start finding matches.",
+      "isFreeToJoin": "Is it free to join Biyaa?",
+      "isFreeToJoinAnswer": "Yes, joining Biyaa is completely free! You can create your profile, browse through other profiles, and use basic search features at no cost. We also offer premium features for enhanced matching and communication options.",
+      "howToCompleteBiodata": "How do I complete my biodata?",
+      "howToCompleteBiodataAnswer": "After signing up, go to your dashboard and click 'Edit Biodata'. Fill in all sections including personal details, family information, education, profession, and preferences. Upload clear photos and provide honest information for better matches.",
+      "whatInfoToInclude": "What information should I include in my profile?",
+      "whatInfoToIncludeAnswer": "Include accurate personal details, education background, profession, family information, lifestyle preferences, and what you're looking for in a partner. Add clear, recent photos and write a brief introduction about yourself.",
+      "howToEnsureSafety": "How does Biyaa ensure the safety of its users?",
+      "howToEnsureSafetyAnswer": "We prioritize user safety through profile verification, secure messaging systems, privacy controls, and 24/7 monitoring. All profiles are manually reviewed, and we have strict policies against fake profiles and inappropriate behavior.",
+      "canControlWhoSees": "Can I control who sees my profile?",
+      "canControlWhoSeesAnswer": "Yes! You have complete control over your privacy settings. You can choose who can view your profile, photos, and contact information. You can also block or report users if needed.",
+      "howProfilesVerified": "How are profiles verified?",
+      "howProfilesVerifiedAnswer": "We verify profiles through multiple methods including email verification, phone number verification, and document verification for premium members. Our team manually reviews all profiles before they go live.",
+      "whatToDoSuspiciousProfile": "What should I do if I encounter a suspicious profile?",
+      "whatToDoSuspiciousProfileAnswer": "If you find a suspicious or fake profile, please report it immediately using the 'Report' button on their profile. Our team will investigate and take appropriate action within 24 hours.",
+      "howMatchingAlgorithmWorks": "How does the matching algorithm work?",
+      "howMatchingAlgorithmWorksAnswer": "Our smart matching algorithm considers your preferences including age, education, profession, location, family background, and lifestyle choices to suggest the most compatible profiles. The more detailed your profile, the better the matches.",
+      "canSearchSpecificCriteria": "Can I search for specific criteria?",
+      "canSearchSpecificCriteriaAnswer": "Yes! Use our advanced search filters to find profiles based on age, location, education, profession, religion, caste, height, and other preferences. You can save your search criteria for future use.",
+      "howOftenNewMatches": "How often are new matches suggested?",
+      "howOftenNewMatchesAnswer": "New matches are suggested daily based on your preferences and activity. Premium members receive priority matching and more suggestions. You can also manually browse through profiles anytime.",
+      "whatIfNoSuitableMatches": "What if I don't find suitable matches?",
+      "whatIfNoSuitableMatchesAnswer": "Try expanding your search criteria, update your preferences, or improve your profile with more information and photos. Our customer support team can also help optimize your profile for better matches.",
+      "howToContactInterested": "How can I contact someone I'm interested in?",
+      "howToContactInterestedAnswer": "You can express interest by sending a 'Like' or direct message through our secure messaging system. Both parties need to show mutual interest to start a conversation.",
+      "isMessagingFree": "Is messaging free on Biyaa?",
+      "isMessagingFreeAnswer": "Basic messaging features are free for all users. Premium members get additional features like priority messaging, message read receipts, and the ability to see who viewed their profile.",
+      "canShareContactInfo": "Can I share my contact information?",
+      "canShareContactInfoAnswer": "For safety reasons, we recommend using our platform's messaging system initially. You can choose to share personal contact information once you feel comfortable and trust the person.",
+      "whatToIncludeFirstMessage": "What should I include in my first message?",
+      "whatToIncludeFirstMessageAnswer": "Keep it genuine and respectful. Mention something from their profile that interested you, introduce yourself briefly, and ask a thoughtful question. Avoid generic messages and be authentic.",
+      "howToUpdateProfile": "How do I update my profile information?",
+      "howToUpdateProfileAnswer": "Go to your dashboard, click on 'Edit Biodata' or 'Profile Settings', make your changes, and save. Profile updates are reviewed and approved within 24 hours.",
+      "canTemporarilyHideProfile": "Can I temporarily hide my profile?",
+      "canTemporarilyHideProfileAnswer": "Yes, you can temporarily deactivate your profile from the settings menu. Your profile will be hidden from searches, but your account and data will remain safe.",
+      "howToDeleteAccount": "How do I delete my account permanently?",
+      "howToDeleteAccountAnswer": "Go to Account Settings and select 'Delete Account'. This action is permanent and will remove all your data. Consider deactivating temporarily if you're unsure.",
+      "forgotPassword": "What should I do if I forgot my password?",
+      "forgotPasswordAnswer": "Click on 'Forgot Password' on the login page, enter your email address, and we'll send you a password reset link. Follow the instructions in the email to create a new password.",
+      "mobileAppAvailable": "Is Biyaa available as a mobile app?",
+      "mobileAppAvailableAnswer": "Currently, Biyaa is available as a responsive web application that works perfectly on mobile browsers. We're working on dedicated mobile apps for Android and iOS, coming soon!",
+      "foundLifePartner": "What happens when I find my life partner?",
+      "foundLifePartnerAnswer": "Congratulations! Please let us know about your success story. You can deactivate your profile and optionally share your story to inspire other members. We'd love to celebrate your happiness!",
+      "contactCustomerSupport": "How can I contact customer support?",
+      "contactCustomerSupportAnswer": "You can reach our customer support team through the 'Contact Us' page, email us at support@biyaa.com, or call our helpline. We're available 24/7 to help with any questions or issues.",
+      "matchmakingServices": "Do you offer any matchmaking services?",
+      "matchmakingServicesAnswer": "While our platform is primarily self-service, we offer personalized matchmaking assistance for premium members. Our relationship experts can help optimize your profile and suggest potential matches.",
+      "refundPremiumFeatures": "Can I get a refund for premium features?",
+      "refundPremiumFeaturesAnswer": "We offer a satisfaction guarantee for premium memberships. If you're not satisfied within the first 30 days, contact our support team for a full refund."
+    }
+  },
+  "guide": {
+    "hero": {
+      "title": "Matrimony Guide",
+      "description": "Your complete guide to finding your perfect life partner through our platform. Learn how to create an outstanding profile, connect with matches, and navigate your journey to a successful marriage."
+    },
+    "quickNavigation": {
+      "gettingStarted": {
+        "title": "Getting Started",
+        "description": "Basic setup and first steps"
+      },
+      "tipsAndTricks": {
+        "title": "Tips & Tricks",
+        "description": "Expert advice and shortcuts"
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Common questions answered"
+      },
+      "bestPractices": {
+        "title": "Best Practices",
+        "description": "Maximize your results"
+      }
+    },
+    "sections": {
+      "gettingStarted": {
+        "title": "Getting Started",
+        "steps": {
+          "step1": {
+            "title": "Step 1: Create Your Profile",
+            "description": "Start by creating a comprehensive and authentic profile that represents who you are.",
+            "bulletPoints": [
+              "Sign up with your email address and create a secure password",
+              "Fill in your personal information including age, height, and occupation",
+              "Upload clear, recent photos that show your personality",
+              "Write a genuine bio that highlights your interests and values",
+              "Specify your preferences for a life partner"
+            ]
+          },
+          "step2": {
+            "title": "Step 2: Browse and Search",
+            "description": "Use our powerful search and matching features to find compatible profiles.",
+            "bulletPoints": [
+              "Use filters to narrow down matches by age, location, education, and profession",
+              "Review daily match recommendations based on your preferences",
+              "Add interesting profiles to your favorites list",
+              "Read compatibility reports to understand match quality"
+            ]
+          },
+          "step3": {
+            "title": "Step 3: Connect and Communicate",
+            "description": "Take the next step by reaching out to potential matches.",
+            "bulletPoints": [
+              "Send interest to profiles you find appealing",
+              "Start conversations with meaningful, personalized messages",
+              "Share additional photos once you build trust",
+              "Schedule phone or video calls to get to know each other better"
+            ]
+          }
+        }
+      },
+      "tipsAndTricks": {
+        "title": "Tips & Tricks",
+        "profileOptimization": {
+          "title": "Profile Optimization",
+          "tips": [
+            "Use high-quality, well-lit photos that clearly show your face",
+            "Include a variety of photos: portrait, full-body, and casual shots",
+            "Write a detailed bio that showcases your personality and values",
+            "Be honest about your preferences and expectations",
+            "Keep your profile updated with recent information"
+          ]
+        },
+        "communicationTips": {
+          "title": "Communication Tips",
+          "tips": [
+            "Read their full profile before sending a message",
+            "Ask thoughtful questions about their interests and goals",
+            "Share genuine stories and experiences about yourself",
+            "Be respectful and patient in your conversations",
+            "Move to phone calls when both parties feel comfortable"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "questions": {
+          "makeProfileStandOut": {
+            "question": "How do I make my profile stand out?",
+            "answer": "Use high-quality photos, write a compelling bio that shows your personality, be specific about your interests and values, and keep your information current and authentic."
+          },
+          "firstMessage": {
+            "question": "What should I include in my first message?",
+            "answer": "Reference something specific from their profile, introduce yourself briefly, ask a thoughtful question, and keep it genuine and respectful. Avoid generic messages."
+          },
+          "personalInfoSafe": {
+            "question": "Is my personal information safe?",
+            "answer": "Yes, we use advanced security measures to protect your data. Your contact information is only shared when you choose to share it, and all profiles are verified before going live."
+          },
+          "findMatchTime": {
+            "question": "How long does it typically take to find a match?",
+            "answer": "The timeline varies for everyone. Some find meaningful connections within weeks, while others may take several months. Success often depends on your activity level, openness, and profile quality."
+          },
+          "hideProfile": {
+            "question": "Can I hide my profile temporarily?",
+            "answer": "Yes, you can temporarily deactivate your profile from your account settings. Your profile will be hidden from searches, but your account and data remain safe."
+          }
+        }
+      },
+      "bestPractices": {
+        "title": "Best Practices",
+        "organization": {
+          "title": "Organization",
+          "practices": [
+            "Keep your profile organized with clear sections and updated information",
+            "Use descriptive and honest language throughout your profile",
+            "Organize your photos in a logical order (main photo first)",
+            "Regularly review and update your preferences"
+          ]
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "practices": [
+            "Involve family members in your search process when appropriate",
+            "Communicate openly about expectations and deal-breakers",
+            "Set up regular check-ins with potential matches",
+            "Be responsive and maintain good communication flow",
+            "Respect boundaries and take things at a comfortable pace"
+          ]
+        }
+      },
+      "contactSupport": {
+        "title": "Need More Help?",
+        "description": "Our support team is here to help you succeed in finding your perfect match. Whether you need technical assistance or advice on your matrimonial journey, we're just a message away.",
+        "contactButton": "Contact Support",
+        "communityButton": "Join Community"
+      }
+    }
+  },
+  "user": {
+    "dashboard": {
+      "title": "User Dashboard",
+      "subtitle": "Manage your profile",
+      "welcomeBack": "Welcome back!",
+      "welcomeMessage": "Welcome back, {name}!",
+      "summaryMessage": "Here's a summary of your matrimonial profile and activities.",
+      "profileOverview": "Profile Overview",
+      "quickActions": "Quick Actions",
+      "biodataType": "Biodata Type",
+      "maritalStatus": "Marital Status",
+      "education": "Education",
+      "profession": "Profession",
+      "location": "Location",
+      "notSpecified": "Not specified",
+      "noBiodataInfo": "No biodata information available",
+      "actionRequired": "Action Required:",
+      "completeMessage": "Please complete your biodata to start receiving matches.",
+      "completeNow": "Complete Now",
+      "biodataCompleted": "Biodata completed",
+      "pleaseCompleteBiodata": "Please complete your biodata.",
+      "loading": "Loading...",
+      "logout": "Logout",
+      "loggedOutSuccess": "Logged out successfully!",
+      "logoutError": "Failed to log out. Please try again.",
+      "logoutErrorLater": "Failed to log out. Please try again later."
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "editBiodata": "Edit Biodata",
+      "likedBiodatas": "Liked Biodatas",
+      "unlikedBiodatas": "Unliked Biodatas",
+      "deleteBiodatas": "Delete Biodatas",
+      "settings": "Settings",
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "quickActions": {
+      "editBiodata": "Edit Biodata",
+      "likedBiodatas": "Liked Biodatas ({count})",
+      "ignoredBiodatas": "Ignored Biodatas ({count})",
+      "settings": "Settings"
+    },
+    "biodata": {
+      "edit": {
+        "title": "Edit Biodata",
+        "saveChanges": "Save Changes",
+        "cancel": "Cancel",
+        "updating": "Updating...",
+        "updateSuccess": "Biodata updated successfully!",
+        "updateError": "Failed to update biodata. Please try again."
+      },
+      "delete": {
+        "title": "Delete Your Biodata",
+        "cannotUndo": "This action cannot be undone.",
+        "deleteWarning": "You are about to permanently delete your biodata. This will remove all your information from our platform, including:",
+        "personalInfo": "Personal information (name, age, etc.)",
+        "contactDetails": "Contact details (email, phone)",
+        "photosDocuments": "All uploaded photos and documents",
+        "preferencesSettings": "Saved preferences and settings",
+        "associatedData": "Likes, matches, and other associated data",
+        "confirmationText": "I understand that this action is irreversible and I want to permanently delete my biodata.",
+        "cancel": "Cancel",
+        "deleting": "Deleting...",
+        "deleteMyBiodata": "Yes, Delete My Biodata",
+        "immediateEffect": "This action is effective immediately and cannot be reversed.",
+        "noBiodataFound": "No Biodata Found",
+        "nothingToDelete": "There is no biodata associated with your account to delete.",
+        "noBiodataMessage": "If you believe this is an error, please contact support. Otherwise, you can create a new biodata.",
+        "goBack": "Go Back",
+        "createBiodata": "Create Biodata",
+        "userAuthRequired": "User authentication is required to delete biodata.",
+        "failedToDelete": "Failed to delete biodata. Please try again later.",
+        "deleteSuccess": "Your biodata has been successfully deleted.",
+        "unexpectedError": "An unexpected error occurred. Please try again."
+      }
+    },
+    "liked": {
+      "title": "Liked Biodatas",
+      "empty": "No liked biodatas yet",
+      "emptyMessage": "You haven't liked any biodatas yet. Start browsing to find your perfect match!",
+      "browseBiodatas": "Browse Biodatas"
+    },
+    "unliked": {
+      "title": "Ignored Biodatas",
+      "empty": "No ignored biodatas",
+      "emptyMessage": "You haven't ignored any biodatas yet."
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your account and preferences",
+      "profileManagement": "Profile Management",
+      "currentEmail": "Current Email",
+      "notAvailable": "Not Available",
+      "editBiodata": "Edit Biodata",
+      "viewProfile": "View Profile",
+      "notifications": "Notification Preferences",
+      "emailNotifications": "Email Notifications",
+      "receiveEmailUpdates": "Receive email updates and newsletters",
+      "smsNotifications": "SMS Notifications",
+      "receiveSmsUpdates": "Receive SMS alerts for important updates",
+      "matchNotifications": "Match Notifications",
+      "getMatchNotifications": "Get notified about new potential matches",
+      "saveNotificationSettings": "Save Notification Settings",
+      "privacySecurity": "Privacy & Security",
+      "profileVisibility": "Profile Visibility",
+      "visibilityPublic": "Public (Visible to all)",
+      "visibilityMembers": "Members (Visible to registered members)",
+      "visibilityPremium": "Premium (Visible to premium members only)",
+      "changePassword": "Change Password",
+      "manageBlockedProfiles": "Manage Blocked Profiles",
+      "accountActions": "Account Actions",
+      "needHelp": "Need help",
+      "supportTeamMessage": "Our support team is here to assist you.",
+      "contactSupport": "Contact Support",
+      "deleteAccount": "Delete Account",
+      "deleteAccountMessage": "Permanently delete your account and all associated data.",
+      "appInformation": "App Information",
+      "version": "Version",
+      "lastUpdated": "Last Updated",
+      "lastUpdatedDate": "July 26, 2025",
+      "supportEmail": "Support Email",
+      "notificationsSaved": "Notification settings saved successfully!",
+      "passwordChangeSoon": "Password change functionality will be implemented soon.",
+      "redirectingToSupport": "Redirecting to support page..."
+    },
+    "profile": {
+      "title": "My Profile",
+      "subtitle": "View and manage your account information",
+      "profilePicture": "Profile Picture",
+      "anonymousUser": "Anonymous User",
+      "accountType": "Account Type",
+      "user": "User",
+      "status": "Status",
+      "active": "Active",
+      "contactInfo": "Contact Information",
+      "email": "Email Address",
+      "notProvided": "Not Provided",
+      "displayName": "Display Name",
+      "notSet": "Not Set",
+      "accountCreated": "Account Created",
+      "unknown": "Unknown",
+      "quickActions": "Quick Actions",
+      "editBiodata": "Edit Biodata",
+      "accountSettings": "Account Settings",
+      "viewProfile": "View Profile",
+      "editProfile": "Edit Profile",
+      "uploadPhoto": "Upload Photo",
+      "removePhoto": "Remove Photo"
+    },
+    "editBiodata": {
+      "title": "Edit Biodata",
+      "steps": {
+        "general": "General Info",
+        "address": "Address",
+        "education": "Education",
+        "family": "Family Info",
+        "personalDetails": "Personal Details",
+        "occupationalInfo": "Occupation",
+        "marriageInfo": "Marriage Info",
+        "expectedLifePartner": "Life Partner",
+        "pledge": "Pledge",
+        "contact": "Contact"
+      },
+      "buttons": {
+        "next": "Next",
+        "back": "Back",
+        "save": "Save",
+        "submit": "Submit"
+      },
+      "messages": {
+        "fillRequiredFields": "Please fill all the required fields in this section.",
+        "fetchError": "Failed to fetch biodata. Please try again.",
+        "saveError": "Failed to save biodata. Please try again.",
+        "updateSuccess": "Biodata updated successfully!",
+        "createSuccess": "Biodata created successfully!",
+        "authError": "User not authenticated. Please sign in again."
+      },
+      "sections": {
+        "general": {
+          "title": "General Information",
+          "description": "Provide your general information."
+        },
+        "address": {
+          "title": "Address Information",
+          "description": "Please provide your address details."
+        },
+        "education": {
+          "title": "Educational Background",
+          "description": "Detail your academic qualifications."
+        },
+        "family": {
+          "title": "Family Information",
+          "description": "Tell us about your family background."
+        },
+        "personalDetails": {
+          "title": "Personal Details",
+          "description": "Provide your personal details."
+        },
+        "occupationalInfo": {
+          "title": "Occupational Information",
+          "description": "Provide your occupational details."
+        },
+        "marriageInfo": {
+          "title": "Marriage Related Information",
+          "description": "Provide your marriage related information."
+        },
+        "expectedLifePartner": {
+          "title": "Expected Life Partner",
+          "description": "Describe your ideal life partner."
+        },
+        "pledge": {
+          "title": "Pledge",
+          "description": "Please read and confirm the following statements."
+        },
+        "contact": {
+          "title": "Contact Information",
+          "description": "Please provide your contact details."
+        }
+      }
+    }
+  }
+}
+    
+  
