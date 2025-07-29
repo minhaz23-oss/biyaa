@@ -47,7 +47,7 @@ const Settings = () => {
   }, [t]);
 
   return (
-    <div className={`p-6 space-y-6 ${fontClass}`}>
+    <div className={`p-2 sm:p-6 space-y-6 ${fontClass}`}>
       {/* Header */}
       <div className="bg-white p-6 rounded-lg shadow-md border border-primary/20">
         <div className="flex items-center space-x-3">

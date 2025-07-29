@@ -491,7 +491,8 @@
     "signUp": "সাইন আপ",
     "profile": "প্রোফাইল",
     "dashboard": "ড্যাশবোর্ড",
-    "logout": "লগআউট"
+    "logout": "লগআউট",
+    "mainNavigation": "প্রধান নেভিগেশন"
   },
   "aboutUs": {
     "title": "আমাদের সম্পর্কে",
@@ -595,6 +596,12 @@
       "sending": "পাঠানো হচ্ছে...",
       "messageSent": "বার্তা পাঠানো হয়েছে!",
       "thankYou": "আমাদের সাথে যোগাযোগ করার জন্য ধন্যবাদ। আমরা ২৪ ঘন্টার মধ্যে আপনার কাছে ফিরে আসব।"
+    }
+  },
+  "search": {
+    "buttons": {
+      "searchNow": "এখনই অনুসন্ধান করুন",
+      "clearAllFilters": "সব ফিল্টার মুছুন"
     }
   },
   "languageToggle": {
@@ -903,7 +910,8 @@
       "deleteBiodatas": "বায়োডাটা মুছুন",
       "settings": "সেটিংস",
       "profile": "প্রোফাইল",
-      "logout": "লগআউট"
+      "logout": "লগআউট",
+      "dashboardNavigation": "ড্যাশবোর্ড নেভিগেশন"
     },
     "quickActions": {
       "editBiodata": "বায়োডাটা সম্পাদনা",

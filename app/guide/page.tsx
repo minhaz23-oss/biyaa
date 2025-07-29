@@ -11,7 +11,7 @@ const GuidePage = () => {
   return (
     <div className="w-full min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-purple-50 to-indigo-100 py-16 px-8 rounded-xl mb-12">
+      <div className="bg-gradient-to-br from-purple-50 to-indigo-100 py-16 px-8 rounded-md mb-12 mt-2">
         <div className="max-w-4xl mx-auto text-center">
           <FaBookOpen className="h-16 w-16 text-indigo-600 mx-auto mb-6" />
           <h1 className="text-4xl font-bold text-gray-900 mb-4">

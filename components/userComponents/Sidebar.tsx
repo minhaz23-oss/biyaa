@@ -91,7 +91,7 @@ const Sidebar = () => {
     <div
       className={`fixed top-0 h-screen bg-white border-r border-gray-500 transition-all duration-300 z-50 ${
         sidebarOpen ? "w-72" : "w-16"
-      }`}
+      } hidden lg:block`}
     >
       {/* Sidebar Header */}
       <div className="p-4">

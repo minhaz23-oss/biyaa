@@ -345,10 +345,12 @@ const EditBiodata = () => {
     );
   }
 
+
+
   return (
-    <div className="container mx-auto py-10 bg-gradient-to-br from-primary/5 to-primary/10 min-h-screen">
+    <div className="w-full max-w-none overflow-x-hidden mx-auto py-6 sm:py-10 px-2 sm:px-6 lg:px-8  min-h-screen">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSave)} className="w-full">
+        <form onSubmit={form.handleSubmit(handleSave)} className="w-full max-w-full">
           <Tabs
             value={activeTab}
             onValueChange={(value) => {
@@ -356,11 +358,33 @@ const EditBiodata = () => {
                 setActiveTab(value);
               }
             }}
-            className="w-full"
+            className="w-full max-w-full"
             orientation="vertical"
           >
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <TabsList className="flex flex-col bg-primary/10 border border-primary/20 rounded-lg p-2 h-fit self-start ">
+            <div className="flex flex-col lg:grid lg:grid-cols-4 gap-4 w-full max-w-full">
+              {/* Mobile: Wrapped tabs */}
+              <TabsList className="flex justify-between items-center lg:hidden w-full  h-fit flex-wrap bg-primary/10 border border-primary/20 rounded-lg  ">
+                {formSteps.map((step, index) => (
+                  <TabsTrigger
+                    key={step.id}
+                    value={step.id}
+                    disabled={!unlockedTabs.includes(step.id)}
+                    className="min-w-fit text-black hover:bg-primary/20 min-h-[44px] flex items-center justify-center text-xs data-[state=active]:bg-primary data-[state=active]:text-primary-foreground p-1"
+                  >
+                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-1 flex-shrink-0 ${
+                      activeTab === step.id ? 'bg-white' : 'bg-primary/20'
+                    }`}>
+                      <span className={`text-xs font-bold ${
+                        activeTab === step.id ? 'text-primary' : 'text-primary'
+                      }`}>{index + 1}</span>
+                    </div>
+                    
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              
+              {/* Desktop: Vertical tabs */}
+              <TabsList className="hidden lg:flex lg:flex-col bg-primary/10 border border-primary/20 rounded-lg p-2 h-fit self-start">
                 {formSteps.map((step) => (
                   <TabsTrigger
                     key={step.id}
@@ -373,7 +397,8 @@ const EditBiodata = () => {
                   </TabsTrigger>
                 ))}
               </TabsList>
-              <div className="col-span-3 ">
+              
+              <div className="lg:col-span-3">
                 <TabsContent value="general" className="w-full">
                   <Card className="border-primary/20 shadow-lg shadow-primary/10">
                     <CardHeader className="bg-primary/5">

@@ -25,7 +25,7 @@ const AboutUs = () => {
   return (
     <div className="w-full min-h-screen py-5">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary/10 to-primary/30 py-20">
+      <div className="bg-gradient-to-br from-primary/10 to-primary/30 py-20 rounded-md">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">{t('aboutUs.title')}</h1>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
@@ -109,7 +109,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <FaRocket className="text-3xl text-primary mb-3" />
                 <h4 className="font-semibold text-gray-800 mb-2">{t('aboutUs.features.innovation.title')}</h4>

@@ -105,7 +105,7 @@ const DeleteBiodata = () => {
   }
 
   return (
-    <div className={`min-h-screen bg-red-50 flex justify-center items-center p-4 ${fontClass}`}>
+    <div className={`min-h-screen  flex justify-center items-center p-4 ${fontClass}`}>
       <div className='bg-white rounded-lg shadow-lg max-w-md w-full p-6 border-2 border-red-200'>
         {/* Warning Icon */}
         <div className='flex justify-center mb-4'>

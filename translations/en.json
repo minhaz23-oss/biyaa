@@ -413,7 +413,8 @@
     "signUp": "Sign Up",
     "profile": "Profile",
     "dashboard": "Dashboard",
-    "logout": "Logout"
+    "logout": "Logout",
+    "mainNavigation": "Main Navigation"
   },
   "aboutUs": {
     "title": "About Us",
@@ -1041,7 +1042,8 @@
       "deleteBiodatas": "Delete Biodatas",
       "settings": "Settings",
       "profile": "Profile",
-      "logout": "Logout"
+      "logout": "Logout",
+      "dashboardNavigation": "Dashboard Navigation"
     },
     "quickActions": {
       "editBiodata": "Edit Biodata",

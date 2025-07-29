@@ -285,7 +285,7 @@ const ViewBiodataPage = () => {
     <div className="max-w-6xl mx-auto p-6">
       {/* Header */}
       <div className="bg-white border border-primary/80 rounded-lg shadow-sm p-6 mb-6">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col sm:flex-row gap-2  items-center justify-between mb-4">
           <button 
             onClick={() => router.back()}
             className="btn-secondary flex items-center gap-2"
@@ -464,7 +464,7 @@ const ViewBiodataPage = () => {
       )}
 
       {/* Actions */}
-      <div className="mt-6 flex justify-center gap-4">
+      <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
         <button 
           onClick={() => router.back()}
           className="btn-secondary flex items-center gap-2"

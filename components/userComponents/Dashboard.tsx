@@ -82,11 +82,11 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="p-6 space-y-6">
+    <div className=" p-2 sm:p-6 space-y-6">
       {/* Welcome Section */}
       <div className="bg-white p-6 rounded-lg shadow-md border border-primary/20">
         <div className="flex items-center space-x-4">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
+          <div className="hidden sm:block w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
             <Image
               src={getProfilePicture()}
               alt="Profile Picture"

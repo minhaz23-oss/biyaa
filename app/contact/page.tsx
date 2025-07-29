@@ -13,7 +13,7 @@ const ContactPage = () => {
   return (
     <PageWrapper className="min-h-screen py-5">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary/10 to-primary/20 py-20">
+      <div className="bg-gradient-to-br from-primary/10 to-primary/20 py-20 rounded-md">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">{t('contact.getInTouch')}</h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">

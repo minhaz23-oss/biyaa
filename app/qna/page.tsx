@@ -178,7 +178,7 @@ const QnA = () => {
   return (
     <div className="w-full min-h-screen py-5">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary/10 to-primary/30 py-20">
+      <div className="bg-gradient-to-br from-primary/10 to-primary/30 py-20 rounded-md">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <FaQuestionCircle className="text-4xl text-primary" />

@@ -15,7 +15,7 @@ const Profile = () => {
   const { t } = useLanguage();
 
   return (
-    <div className={`${fontClass} p-6 space-y-6`}>
+    <div className={`${fontClass} p-2 sm:p-6 space-y-6`}>
       {/* Header */}
       <div className="bg-white p-6 rounded-lg shadow-md border border-primary/80">
         <div className="flex items-center space-x-3">
@@ -30,7 +30,7 @@ const Profile = () => {
       {/* Profile Information */}
       <div className="bg-white p-6 rounded-lg shadow-md border border-primary/80">
         <div className="flex items-center space-x-6">
-          <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary/80">
+          <div className="hidden sm:block w-20 h-20 rounded-full overflow-hidden border-4 border-primary/80">
             <Image
               src={user?.photoURL || '/images/profiles/male.jpeg'}
               alt={t('user.profile.profilePicture')}

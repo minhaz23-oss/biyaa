@@ -5,7 +5,7 @@ import { searchBiodata } from '@/lib/actions/biodata.actions'
 import { useAuth } from '@/lib/hooks/useAuth'
 import { CgGenderMale } from "react-icons/cg";
 import { GiCharacter } from "react-icons/gi";
-import { FaSearch, FaFilter  } from "react-icons/fa";
+import { FaSearch, FaFilter, FaTimes  } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdHeight, MdWork } from "react-icons/md";
 import { BsPersonBadge } from "react-icons/bs";
@@ -70,6 +70,7 @@ const SearchPage = () => {
   const [searchResults, setSearchResults] = useState<any[]>([])
   const [resultsLoading, setResultsLoading] = useState(false)
   const [showFilters, setShowFilters] = useState(false)
+  const [mobileFilterMenuOpen, setMobileFilterMenuOpen] = useState(false)
 
   // State for location data
   const [divisions, setDivisions] = useState<Division[]>([])
@@ -234,6 +235,22 @@ const SearchPage = () => {
     [districts]
   )
 
+  // Prevent body scrolling when mobile filter menu is open
+  useEffect(() => {
+    if (mobileFilterMenuOpen) {
+      // Prevent scrolling when menu is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restore scrolling when menu is closed
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileFilterMenuOpen]);
+
   useEffect(() => {
     fetchDivisions()
   }, [fetchDivisions])
@@ -358,16 +375,27 @@ const SearchPage = () => {
     <div className="max-w-7xl mx-auto p-6">
       {/* Search Header */}
       <div className="bg-white border border-primary/80 rounded-lg shadow-sm  p-6 mb-6">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col gap-1 sm:gap-0 sm:flex-row items-center justify-between mb-4">
           <h1 className="text-2xl font-bold text-gray-900">{t('search.title')}</h1>
           <div className="flex gap-2 items-center">
+            {/* Desktop Filter Button */}
             <button 
               onClick={() => setShowFilters(!showFilters)}
-              className="btn-secondary flex items-center gap-2"
+              className="hidden md:flex btn-secondary items-center gap-2"
             >
               <FaFilter className="text-sm" />
               {showFilters ? t('search.hideFilters') : t('search.showFilters')}
             </button>
+            
+            {/* Mobile Filter Button */}
+            <button 
+              onClick={() => setMobileFilterMenuOpen(true)}
+              className="md:hidden btn-secondary flex items-center gap-2"
+            >
+              <FaFilter className="text-sm" />
+              {t('search.showFilters')}
+            </button>
+            
             <button 
               onClick={handleSearch}
               className="btn-primary"
@@ -398,9 +426,9 @@ const SearchPage = () => {
         </div>
       </div>
 
-      {/* Comprehensive Search Filters */}
+      {/* Desktop Comprehensive Search Filters */}
       {showFilters && (
-        <div className="bg-white rounded-lg shadow-sm border border-primary/80 p-6 mb-6">
+        <div className="hidden md:block bg-white rounded-lg shadow-sm border border-primary/80 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">{t('common.filter')}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -411,7 +439,7 @@ const SearchPage = () => {
 {/* Age */}
               <div className="flex gap-2 items-center">
                 <FaBirthdayCake className="text-lg flex-shrink-0" />
-                <span className="text-sm">Age</span>
+                <span className="text-sm">{t('search.labels.age')}</span>
                 <Select value={searchFilters.age} onValueChange={(value) => handleFilterChange('age', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Age Range" />
@@ -429,7 +457,7 @@ const SearchPage = () => {
 {/* Height */}
               <div className="flex gap-2 items-center">
                 <MdHeight className="text-lg flex-shrink-0" />
-                <span className="text-sm">Height</span>
+                <span className="text-sm">{t('search.labels.height')}</span>
                 <Select value={searchFilters.height} onValueChange={(value) => handleFilterChange('height', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Height" />
@@ -447,7 +475,7 @@ const SearchPage = () => {
 {/* Complexion */}
               <div className="flex gap-2 items-center">
                 <BsPersonBadge className="text-lg flex-shrink-0" />
-                <span className="text-sm">Complexion</span>
+                <span className="text-sm">{t('search.labels.complexion')}</span>
                 <Select value={searchFilters.complexion} onValueChange={(value) => handleFilterChange('complexion', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Complexion" />
@@ -470,7 +498,7 @@ const SearchPage = () => {
 {/* Marital Status */}
               <div className="flex gap-2 items-center">
                 <GiCharacter className="text-lg flex-shrink-0" />
-                <span className="text-sm">Marital Status</span>
+                <span className="text-sm">{t('search.labels.maritalStatus')}</span>
                 <Select value={searchFilters.maritalStatus} onValueChange={(value) => handleFilterChange('maritalStatus', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Marital Status" />
@@ -488,7 +516,7 @@ const SearchPage = () => {
 {/* Family Status */}
               <div className="flex gap-2 items-center">
                 <BsPersonBadge className="text-lg flex-shrink-0" />
-                <span className="text-sm">Family Status</span>
+                <span className="text-sm">{t('search.labels.familyStatus')}</span>
                 <Select value={searchFilters.familyStatus} onValueChange={(value) => handleFilterChange('familyStatus', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Family Status" />
@@ -506,7 +534,7 @@ const SearchPage = () => {
 {/* Profession */}
               <div className="flex gap-2 items-center">
                 <MdWork className="text-lg flex-shrink-0" />
-                <span className="text-sm">Profession</span>
+                <span className="text-sm">{t('search.labels.profession')}</span>
                 <Select value={searchFilters.profession} onValueChange={(value) => handleFilterChange('profession', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Profession" />
@@ -524,7 +552,7 @@ const SearchPage = () => {
 {/* Biodata Type */}
               <div className="flex gap-2 items-center">
                 <BsPersonBadge className="text-lg flex-shrink-0" />
-                <span className="text-sm">Biodata Type</span>
+                <span className="text-sm">{t('search.labels.biodataType')}</span>
                 <Select value={searchFilters.biodataType} onValueChange={(value) => handleFilterChange('biodataType', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder="Biodata Type" />
@@ -542,12 +570,12 @@ const SearchPage = () => {
 
             {/* Location */}
             <div className="space-y-4">
-              <h3 className="font-medium text-gray-700 border-b pb-2">Location</h3>
+              <h3 className="font-medium text-gray-700 border-b pb-2">{t('search.sections.location')}</h3>
               
 {/* Division */}
               <div className="flex gap-2 items-center">
                 <FaLocationDot className="text-lg flex-shrink-0" />
-                <span className="text-sm">Division</span>
+                <span className="text-sm">{t('search.labels.division')}</span>
                 <Select value={searchFilters.division} onValueChange={(value) => handleFilterChange('division', value)}>
                   <SelectTrigger className="w-full h-9 text-sm border border-primary/80">
                     <SelectValue placeholder={locationLoading.divisions ? "Loading..." : "Division"} />
@@ -566,7 +594,7 @@ const SearchPage = () => {
 {/* District */}
               <div className="flex gap-2 items-center">
                 <FaLocationDot className="text-lg flex-shrink-0" />
-                <span className="text-sm">District</span>
+                <span className="text-sm">{t('search.labels.district')}</span>
                 <Select 
                   value={searchFilters.district} 
                   onValueChange={(value) => handleFilterChange('district', value)}
@@ -589,7 +617,7 @@ const SearchPage = () => {
 {/* Upazilla */}
               <div className="flex gap-2 items-center">
                 <FaLocationDot className="text-lg flex-shrink-0" />
-                <span className="text-sm">Upazilla</span>
+                <span className="text-sm">{t('search.labels.upazilla')}</span>
                 <Select 
                   value={searchFilters.upazilla} 
                   onValueChange={(value) => handleFilterChange('upazilla', value)}
@@ -612,7 +640,7 @@ const SearchPage = () => {
 {/* Address */}
               <div className="flex gap-2 items-center">
                 <FaLocationDot className="text-lg flex-shrink-0" />
-                <span className="text-sm">Address</span>
+                <span className="text-sm">{t('search.labels.address')}</span>
                 <input
                   type="text"
                   placeholder="Address (Optional)"
@@ -625,14 +653,14 @@ const SearchPage = () => {
 
             {/* Search Actions */}
             <div className="space-y-4">
-              <h3 className="font-medium text-gray-700 border-b pb-2">Actions</h3>
+              <h3 className="font-medium text-gray-700 border-b pb-2">{t('search.sections.actions')}</h3>
               
               <button 
                 onClick={handleSearch}
                 className="w-full flex items-center justify-center gap-2 btn-primary text-white px-4 py-2 rounded-md text-sm"
               >
                 <FaSearch className="text-sm" />
-                Search Now
+                {t('search.buttons.searchNow')}
               </button>
               
               <button 
@@ -653,7 +681,305 @@ const SearchPage = () => {
                 }}
                 className="btn-secondary w-full"
               >
-                Clear All Filters
+                {t('search.buttons.clearAllFilters')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Filter Menu - Slides in from right */}
+      {mobileFilterMenuOpen && (
+        <div className="fixed inset-0 bg-opacity-50 z-50 md:hidden transition-all duration-300 ease-in-out">
+          <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-lg transform transition-transform duration-300 ease-in-out overflow-y-auto">
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+              <h2 className="text-lg font-semibold text-gray-900">{t('common.filter')}</h2>
+              <button
+                onClick={() => setMobileFilterMenuOpen(false)}
+                className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors duration-200"
+                aria-label="Close filter menu"
+              >
+                <FaTimes className="text-lg" />
+              </button>
+            </div>
+            
+            {/* Scrollable Content */}
+            <div className="p-4 space-y-6 pb-20">
+              {/* Basic Information */}
+              <div className="space-y-4">
+                <h3 className="font-medium text-gray-700 border-b pb-2">{t('search.sections.basicInformation')}</h3>
+                
+                {/* Age */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <FaBirthdayCake className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.age')}</span>
+                  </div>
+                  <Select value={searchFilters.age} onValueChange={(value) => handleFilterChange('age', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Age Range" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {ageOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Height */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <MdHeight className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.height')}</span>
+                  </div>
+                  <Select value={searchFilters.height} onValueChange={(value) => handleFilterChange('height', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Height" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {heightOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Complexion */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <BsPersonBadge className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.complexion')}</span>
+                  </div>
+                  <Select value={searchFilters.complexion} onValueChange={(value) => handleFilterChange('complexion', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Complexion" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {complexionOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              
+              {/* Personal & Social */}
+              <div className="space-y-4">
+                <h3 className="font-medium text-gray-700 border-b pb-2">{t('search.sections.personalSocial')}</h3>
+                
+                {/* Marital Status */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <GiCharacter className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.maritalStatus')}</span>
+                  </div>
+                  <Select value={searchFilters.maritalStatus} onValueChange={(value) => handleFilterChange('maritalStatus', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Marital Status" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {maritalStatusOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Family Status */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <BsPersonBadge className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.familyStatus')}</span>
+                  </div>
+                  <Select value={searchFilters.familyStatus} onValueChange={(value) => handleFilterChange('familyStatus', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Family Status" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {familyStatusOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Profession */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <MdWork className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.profession')}</span>
+                  </div>
+                  <Select value={searchFilters.profession} onValueChange={(value) => handleFilterChange('profession', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Profession" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {professionOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Biodata Type */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <BsPersonBadge className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.biodataType')}</span>
+                  </div>
+                  <Select value={searchFilters.biodataType} onValueChange={(value) => handleFilterChange('biodataType', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder="Biodata Type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {biodataTypeOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              
+              {/* Location */}
+              <div className="space-y-4">
+                <h3 className="font-medium text-gray-700 border-b pb-2">{t('search.sections.location')}</h3>
+                
+                {/* Division */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <FaLocationDot className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.division')}</span>
+                  </div>
+                  <Select value={searchFilters.division} onValueChange={(value) => handleFilterChange('division', value)}>
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder={locationLoading.divisions ? "Loading..." : "Division"} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Divisions</SelectItem>
+                      {divisions.map((division) => (
+                        <SelectItem key={division.id} value={division.name}>
+                          {division.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* District */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <FaLocationDot className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.district')}</span>
+                  </div>
+                  <Select 
+                    value={searchFilters.district} 
+                    onValueChange={(value) => handleFilterChange('district', value)}
+                    disabled={searchFilters.division === 'all' || !searchFilters.division}
+                  >
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder={locationLoading.districts ? "Loading..." : "District"} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Districts</SelectItem>
+                      {districts.map((district) => (
+                        <SelectItem key={district.id} value={district.name}>
+                          {district.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Upazilla */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <FaLocationDot className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.upazilla')}</span>
+                  </div>
+                  <Select 
+                    value={searchFilters.upazilla} 
+                    onValueChange={(value) => handleFilterChange('upazilla', value)}
+                    disabled={searchFilters.district === 'all' || !searchFilters.district}
+                  >
+                    <SelectTrigger className="w-full h-10 text-sm border border-primary/80">
+                      <SelectValue placeholder={locationLoading.upazillas ? "Loading..." : "Upazilla"} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Upazillas</SelectItem>
+                      {upazillas.map((upazilla) => (
+                        <SelectItem key={upazilla.id} value={upazilla.name}>
+                          {upazilla.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                {/* Address */}
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <FaLocationDot className="text-lg flex-shrink-0" />
+                    <span className="text-sm font-medium">{t('search.labels.address')}</span>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Address (Optional)"
+                    value={searchFilters.address || ''}
+                    onChange={(e) => handleFilterChange('address', e.target.value)}
+                    className="w-full h-10 px-3 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            {/* Sticky Action Buttons */}
+            <div className="sticky bottom-0 bg-white border-t border-gray-200 p-4 space-y-3">
+              <button 
+                onClick={() => {
+                  handleSearch();
+                  setMobileFilterMenuOpen(false);
+                }}
+                className="w-full flex items-center justify-center gap-2 btn-primary text-white px-4 py-3 rounded-md text-sm font-medium"
+              >
+                <FaSearch className="text-sm" />
+                {t('search.buttons.searchNow')}
+              </button>
+              
+              <button 
+                onClick={() => {
+                  setSearchFilters({
+                    maritalStatus: 'all',
+                    division: 'all',
+                    district: 'all',
+                    upazilla: 'all',
+                    biodataType: 'all',
+                    address: '',
+                    complexion: 'all',
+                    familyStatus: 'all',
+                    height: 'all',
+                    age: 'all',
+                    profession: 'all'
+                  });
+                }}
+                className="btn-secondary w-full py-2"
+              >
+                {t('search.buttons.clearAllFilters')}
               </button>
             </div>
           </div>

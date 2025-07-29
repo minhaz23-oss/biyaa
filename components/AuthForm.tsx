@@ -120,7 +120,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
       
       if (!idToken) {
         console.error("No ID token received from Google authentication");
-        window.alert("Authentication failed. Please try again.");
+        toast.error("Authentication failed. Please try again.");
         return;
       }
       
@@ -128,7 +128,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
       
       if (!email) {
         console.error("No email received from Google authentication");
-        window.alert("Unable to get email from Google. Please try again.");
+        toast.error("Unable to get email from Google. Please try again.");
         return;
       }
       
@@ -141,11 +141,12 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
       if (!result?.success) {
         console.error("Server-side authentication failed:", result?.message);
-        window.alert(result?.message || "Authentication failed. Please try again.");
+        toast.error(result?.message || "Authentication failed. Please try again.");
         return;
       }
       
       console.log("Google sign-in successful");
+      toast.success("Sign-in successful!");
       router.push('/');
       
     } catch (error: any) {
@@ -153,39 +154,35 @@ const AuthForm = ({ type }: { type: FormType }) => {
       
       // Handle specific Firebase Auth errors
       if (error.code === 'auth/popup-closed-by-user') {
-        window.alert("Sign-in was cancelled. Please try again.");
+        toast.error("Sign-in was cancelled. Please try again.");
       } else if (error.code === 'auth/popup-blocked') {
-        window.alert("Popup was blocked. Please allow popups and try again.");
+        toast.error("Popup was blocked. Please allow popups and try again.");
       } else if (error.code === 'auth/network-request-failed') {
-        window.alert("Network error. Please check your connection and try again.");
-      } else {
-        window.alert("Google sign-in failed. Please try again.");
+        toast.error("Network error. Please check your connection and try again.");
       }
     }
   };
   return (
-    <div className=" w-full h-screen flex flex-col gap-3 items-center py-5">
-      <div className=" flex flex-col gap-2">
-        <h1 className={`text-3xl font-regular text-center ${fontClass}`}>
+    <div className="w-full min-h-screen flex flex-col gap-3 items-center py-5 px-4">
+      <div className="flex flex-col gap-2">
+        <h1 className={`text-2xl sm:text-3xl font-regular text-center ${fontClass}`}>
           {type === "sign-in" ? t('auth.signInTitle') : t('auth.signUpTitle')}
         </h1>
-        <h1 className={`text-2xl font-regular text-center text-gray-500 ${fontClass}`}>
-          {type === "sign-in" ? t('auth.signInSubtitle') : t('auth.signUpSubtitle')}
-        </h1>
+        
       </div>
-      <div className=" min-w-[780px] bg-primary/50 h-fit flex rounded-lg overflow-hidden">
-        <div className=" w-fit h-fit  relative">
+      <div className="w-full max-w-4xl bg-primary/50 h-fit flex flex-col lg:flex-row rounded-lg overflow-hidden">
+        <div className="w-full lg:w-fit h-fit relative hidden lg:block">
           <Image
             src="/images/loveletter.png"
             alt="auth-bg"
             width={350}
             height={450}
-            className=" object-cover"
+            className="object-cover"
           />
         </div>
-        <div className=" w-[calc(100%-350px)] h-full  relative">
-          <div className=" w-full h-full flex flex-col gap-2  text-black font-regular text-[18px] px-5 py-4">
-            <h1 className=" text-gray-500 font-bold text-[30px] text-center leading-none">
+        <div className="w-full lg:w-[calc(100%-350px)] h-full relative">
+          <div className="w-full h-full flex flex-col gap-2 text-black font-regular text-base sm:text-lg px-4 sm:px-5 py-4">
+            <h1 className="text-gray-500 font-bold text-2xl sm:text-3xl text-center leading-none">
               Biyaa.com
             </h1>
             <Form {...form}>

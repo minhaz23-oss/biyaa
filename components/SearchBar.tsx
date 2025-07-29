@@ -219,12 +219,12 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="z-10 absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[1200px] min-w-[800px] bg-white min-h-[60px] rounded-lg text-gray p-6 flex flex-wrap items-center justify-between gap-4">
+    <div className="z-10 absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[95%] sm:w-[90%] max-w-[1200px] bg-white min-h-[60px] rounded-lg text-gray p-3 sm:p-6 flex flex-wrap items-center justify-center sm:justify-between gap-2 sm:gap-4">
       {/* Biodata Type Selection */}
       <div className="flex gap-2 items-center">
-        <CgGenderMale className="text-[18px] flex-shrink-0" />
+        <CgGenderMale className="text-[16px] sm:text-[18px] flex-shrink-0" />
         <Select value={searchFilters.biodataType} onValueChange={(value) => handleFilterChange('biodataType', value)}>
-          <SelectTrigger className="w-[120px] h-[35px] text-[14px] font-semibold border-none bg-transparent">
+          <SelectTrigger className="w-[110px] sm:w-[120px] h-[32px] sm:h-[35px] text-[12px] sm:text-[14px] font-semibold border-none bg-transparent">
             <SelectValue placeholder={t('searchBar.biodataType')} />
           </SelectTrigger>
           <SelectContent>
@@ -239,9 +239,9 @@ const SearchBar = () => {
 
       {/* Marital Status Selection */}
       <div className="flex gap-2 items-center">
-        <GiCharacter className="text-[18px] flex-shrink-0" />
+        <GiCharacter className="text-[16px] sm:text-[18px] flex-shrink-0" />
         <Select value={searchFilters.maritalStatus} onValueChange={(value) => handleFilterChange('maritalStatus', value)}>
-          <SelectTrigger className="w-[110px] h-[35px] text-[14px] font-semibold border-none bg-transparent">
+          <SelectTrigger className="w-[100px] sm:w-[110px] h-[32px] sm:h-[35px] text-[12px] sm:text-[14px] font-semibold border-none bg-transparent">
             <SelectValue placeholder={t('searchBar.marital')} />
           </SelectTrigger>
           <SelectContent>
@@ -255,12 +255,12 @@ const SearchBar = () => {
       </div>
 
       {/* Location Selection */}
-      <div className="flex gap-2 items-center flex-wrap">
-        <FaLocationDot className="text-[18px] flex-shrink-0" />
+      <div className="flex gap-1 sm:gap-2 items-center flex-wrap">
+        <FaLocationDot className="text-[16px] sm:text-[18px] flex-shrink-0" />
         
         {/* Division Select */}
         <Select value={searchFilters.division} onValueChange={(value) => handleFilterChange('division', value)}>
-          <SelectTrigger className="w-[100px] h-[35px] text-[14px] font-semibold border-none bg-transparent">
+          <SelectTrigger className="w-[90px] sm:w-[100px] h-[32px] sm:h-[35px] text-[12px] sm:text-[14px] font-semibold border-none bg-transparent">
             <SelectValue placeholder={loading.divisions ? t('common.loading') : t('searchBar.division')} />
           </SelectTrigger>
           <SelectContent>
@@ -279,7 +279,7 @@ const SearchBar = () => {
           onValueChange={(value) => handleFilterChange('district', value)}
           disabled={searchFilters.division === 'all' || !searchFilters.division}
         >
-          <SelectTrigger className="w-[100px] h-[35px] text-[14px] font-semibold border-none bg-transparent">
+          <SelectTrigger className="w-[90px] sm:w-[100px] h-[32px] sm:h-[35px] text-[12px] sm:text-[14px] font-semibold border-none bg-transparent">
             <SelectValue placeholder={loading.districts ? t('common.loading') : t('searchBar.district')} />
           </SelectTrigger>
           <SelectContent>
@@ -298,7 +298,7 @@ const SearchBar = () => {
           onValueChange={(value) => handleFilterChange('upazilla', value)}
           disabled={searchFilters.district === 'all' || !searchFilters.district}
         >
-          <SelectTrigger className="w-[100px] h-[35px] text-[14px] font-semibold border-none bg-transparent">
+          <SelectTrigger className="w-[90px] sm:w-[100px] h-[32px] sm:h-[35px] text-[12px] sm:text-[14px] font-semibold border-none bg-transparent">
             <SelectValue placeholder={loading.upazillas ? t('common.loading') : t('searchBar.upazilla')} />
           </SelectTrigger>
           <SelectContent>
@@ -315,9 +315,9 @@ const SearchBar = () => {
       {/* Search Button */}
       <button 
         onClick={handleSearch}
-        className="flex items-center gap-2 btn-primary text-white px-4 py-2 rounded-md text-[14px] flex-shrink-0"
+        className="flex items-center gap-2 btn-primary text-white px-3 sm:px-4 py-2 rounded-md text-[12px] sm:text-[14px] flex-shrink-0 w-full sm:w-auto justify-center mt-2 sm:mt-0"
       >
-        <FaSearch className="text-[16px]" />
+        <FaSearch className="text-[14px] sm:text-[16px]" />
         {t('common.search')}
       </button>
     </div>
