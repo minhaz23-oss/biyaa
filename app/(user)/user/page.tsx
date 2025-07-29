@@ -10,7 +10,7 @@ import Profile from "@/components/userComponents/Profile";
 import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
 
-const page = () => {
+const UserPage = () => {
   const activeTab = useSelector((state: RootState) => state.user.activeTab);
   const renderContent = () => {
     switch(activeTab) {
@@ -40,4 +40,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default UserPage;

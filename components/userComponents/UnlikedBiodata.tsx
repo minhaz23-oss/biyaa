@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { toast } from 'sonner'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useFont } from '@/lib/hooks/useFont'
+import Image from 'next/image'
 
 interface BiodataType {
   id: string
@@ -141,9 +142,11 @@ const UnlikedBiodata = () => {
         {/* Profile Picture */}
         <div className="flex-shrink-0">
           {biodata.profilePicture ? (
-            <img 
+            <Image 
               src={biodata.profilePicture} 
               alt="Profile" 
+              width={80}
+              height={80}
               className="w-20 h-20 rounded-full object-cover border-2 border-gray-300 opacity-75"
             />
           ) : (

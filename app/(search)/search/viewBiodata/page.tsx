@@ -9,9 +9,9 @@ import { useAuth } from '@/lib/hooks/useAuth'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { FaArrowLeft, FaUser, FaMapMarkerAlt, FaGraduationCap, FaBriefcase, FaHeart, FaUsers, FaEyeSlash } from 'react-icons/fa'
 import { MdHeight, MdCake } from 'react-icons/md'
-import { GiBodyHeight, GiWeight } from 'react-icons/gi'
 import { IoMdCall, IoMdMail } from 'react-icons/io'
 import { toast } from 'sonner'
+import Image from 'next/image'
 
 interface BiodataType {
   id: string
@@ -300,9 +300,11 @@ const ViewBiodataPage = () => {
         
         <div className="text-center">
           {biodata.profilePicture ? (
-            <img 
+            <Image 
               src={biodata.profilePicture} 
               alt="Profile" 
+              width={128}
+              height={128}
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-primary/20"
             />
           ) : (
@@ -455,7 +457,7 @@ const ViewBiodataPage = () => {
             {biodata.guardiansAgree && (
               <div className="bg-green-50 border border-green-200 rounded-md p-3">
                 <span className="text-green-800 font-medium flex items-center gap-2">
-                  ✓ Guardian's agreement confirmed
+                  ✓ Guardian&apos;s agreement confirmed
                 </span>
               </div>
             )}

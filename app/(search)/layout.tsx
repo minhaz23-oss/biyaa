@@ -4,6 +4,7 @@ import { useAuth } from '@/lib/hooks/useAuth';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from '@/components/LanguageToggle';
+import Link from 'next/link';
 
 const SearchLayout = ({ children }: { children: ReactNode }) => {
   const { isAuthenticated, loading } = useAuth();
@@ -37,9 +38,9 @@ const SearchLayout = ({ children }: { children: ReactNode }) => {
           <div className="flex items-center gap-4">
             {/* Language Toggle */}
             <LanguageToggle />
-            <a  href="/" className="text-sm text-gray-600 hover:text-white hover:bg-primary rounded-md px-3 py-2">
+            <Link href="/" className="text-sm text-gray-600 hover:text-white hover:bg-primary rounded-md px-3 py-2">
               ← {t('nav.home')}
-            </a>
+            </Link>
           </div>
         </div>
       </header>

@@ -283,6 +283,7 @@ const SearchPage = () => {
     }
     
     setLoading(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router])
 
   const performSearch = async (filters: SearchFilters) => {

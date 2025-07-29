@@ -58,7 +58,7 @@ const Sidebar = () => {
     } finally {
       setLoading(false);
     }
-  }, [userId]);
+  }, [userId, dispatch]);
 
   useEffect(() => {
     getBiodata();

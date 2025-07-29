@@ -58,7 +58,7 @@ const ContactPageForm = () => {
         </div>
         <h3 className="text-xl font-semibold text-green-800 mb-2">Message Sent!</h3>
         <p className="text-green-600">
-          Thank you for reaching out to us. We'll get back to you within 24 hours.
+          Thank you for reaching out to us. We&apos;ll get back to you within 24 hours.
         </p>
       </div>
     );
