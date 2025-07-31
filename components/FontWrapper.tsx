@@ -11,8 +11,8 @@ interface FontWrapperProps {
 const FontWrapper = ({ children, className = '' }: FontWrapperProps) => {
   const { language } = useLanguage();
   
-  // Apply appropriate font class based on language
-  const fontClass = language === 'bn' ? 'font-mina' : 'font-parkinsans';
+  // Apply default font for all languages
+  const fontClass = 'font-parkinsans';
   
   return (
     <div className={`${fontClass} ${className}`}>

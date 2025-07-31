@@ -4,19 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Import fonts */
-@font-face {
-  font-family: 'Mina';
-  src: url('/fonts/Mina-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mina';
-  src: url('/fonts/Mina-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
 
 @theme {
   /* Colors - Light mode as default */
@@ -29,7 +16,6 @@
   --color-accent: #e5e7eb;
 
   /* Fonts */
-  --font-family-mina: 'Mina', system-ui, sans-serif;
 }
 
 @theme inline {
@@ -82,10 +68,10 @@
     @apply cursor-pointer;
   }
 
-  /* Apply Mina font to Bengali text */
+  /* Bengali text uses default font */
   [lang="bn"], 
   :lang(bn) {
-    font-family: var(--font-family-mina);
+    font-family: var(--font-parkinsans), system-ui, sans-serif;
   }
 
   /* Default font fallback */
@@ -96,11 +82,7 @@
 
 /* Custom utilities for dynamic font switching */
 @utility bengali-font {
-  font-family: var(--font-family-mina);
-}
-
-@utility font-mina {
-  font-family: var(--font-mina);
+  font-family: var(--font-parkinsans), system-ui, sans-serif;
 }
 
 @utility font-parkinsans {
@@ -118,11 +100,7 @@
 /* Custom component styles */
 @layer components {
   .bengali-text {
-    font-family: var(--font-family-mina);
-  }
-  
-  .font-mina {
-    font-family: var(--font-mina) !important;
+    font-family: var(--font-parkinsans), system-ui, sans-serif;
   }
   
   .font-parkinsans {

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Parkinsans } from "next/font/google";
-import localFont from 'next/font/local';
 import "./globals.css";
 import ReduxProvider from "@/components/providers/ReduxProvider";
 import { Toaster } from "@/components/ui/sonner";
@@ -14,21 +13,6 @@ const parkinsans = Parkinsans({
   adjustFontFallback: false
 });
 
-const mina = localFont({
-  src: [
-    {
-      path: '../public/fonts/Mina-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Mina-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-mina',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -94,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn">
-      <body className={`${parkinsans.variable} ${mina.variable} min-h-screen bg-background text-foreground`}>
+      <body className={`${parkinsans.variable} min-h-screen bg-background text-foreground`}>
         <LanguageProvider>
           <DynamicLayout>
             <ReduxProvider>

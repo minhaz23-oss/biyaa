@@ -14,15 +14,10 @@ const DynamicLayout = ({ children }: DynamicLayoutProps) => {
     // Update HTML lang attribute
     document.documentElement.lang = language;
     
-    // Update body class for font switching
+    // Update body class to use default font for all languages
     const body = document.body;
     body.classList.remove('font-parkinsans', 'font-mina');
-    
-    if (language === 'bn') {
-      body.classList.add('font-mina');
-    } else {
-      body.classList.add('font-parkinsans');
-    }
+    body.classList.add('font-parkinsans');
   }, [language]);
 
   return <>{children}</>;

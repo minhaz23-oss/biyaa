@@ -6,12 +6,12 @@ export const useFont = () => {
   const { language } = useLanguage();
   
   const getFontClass = () => {
-    return language === 'bn' ? 'font-mina' : 'font-parkinsans';
+    return 'font-parkinsans';
   };
   
   const getFontStyle = () => {
     return {
-      fontFamily: language === 'bn' ? 'var(--font-mina)' : 'var(--font-parkinsans)'
+      fontFamily: 'var(--font-parkinsans)'
     };
   };
   
