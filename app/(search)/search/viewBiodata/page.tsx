@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useDispatch, useSelector } from 'react-redux'
 import { getBiodataById } from '@/lib/actions/biodata.actions'
@@ -71,6 +71,21 @@ interface BiodataType {
 }
 
 const ViewBiodataPage = () => {
+  return (
+    <Suspense fallback={
+      <div className="max-w-4xl mx-auto p-6">
+        <div className="flex justify-center items-center min-h-[400px]">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+          <span className="ml-3 text-gray-600">Loading...</span>
+        </div>
+      </div>
+    }>
+      <InnerViewBiodataPage />
+    </Suspense>
+  )
+}
+
+const InnerViewBiodataPage = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
   const biodataId = searchParams.get('id')

@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { searchBiodata } from '@/lib/actions/biodata.actions'
 import { useAuth } from '@/lib/hooks/useAuth'
-import { CgGenderMale } from "react-icons/cg";
+
 import { GiCharacter } from "react-icons/gi";
 import { FaSearch, FaFilter, FaTimes  } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
